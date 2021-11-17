@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: ['react', 'prettier'], // , 'react-hooks'],
   rules: {
+    'no-console': 'off',
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': 'off',
     'react/react-in-jsx-scope': 'off',

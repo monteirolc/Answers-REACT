@@ -11,6 +11,13 @@ export const Title = styled.h1`
   }
 `;
 
+export const Line = styled.div`
+  width: 90%;
+  border: 1px solid ${colors.aquamarine};
+  margin-top: 10px;
+  margin-bottom: 20px;
+`;
+
 export const MyP = styled.p`
   color: ${colors.ceruleanCrayola};
   margin: 15px 0;
@@ -22,4 +29,18 @@ export const MyDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const QuestionContainer = styled.div`
+  margin-top: 20px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  div + div {
+    border-top: 1px solid #000;
+  }
 `;

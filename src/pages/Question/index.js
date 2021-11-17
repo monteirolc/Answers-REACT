@@ -1,15 +1,22 @@
-import React from 'react';
-import ButtonGroup from '@mui/material/ButtonGroup';
+import React, { useState } from 'react';
+
 import Button from '@mui/material/Button';
-import Cancel from '@mui/icons-material/Cancel';
-import PlayArrow from '@mui/icons-material/PlayArrow';
 
 import { Container } from '../../styles/GlobalStyles';
-import { Title, MyP, MyDiv } from './styled';
+import { Title, MyP, MyDiv, Line, QuestionContainer } from './styled';
+import axios from '../../services/axios';
 
 export default function Question() {
+  const [questions, setQuestions] = useState([]);
+
   const urlLocal = window.location.href;
-  const [, , , , questions] = urlLocal.split('/');
+  const [, , , , nquest] = urlLocal.split('/');
+  async function getData() {
+    const response = await axios.get(`api.php?amount=${nquest}`);
+    console.clear();
+    setQuestions(response.data);
+  }
+  getData();
   return (
     <Container>
       <Title>
@@ -17,19 +24,17 @@ export default function Question() {
           Brain<small>test</small>
         </h1>
       </Title>
-      <MyP>{`You selected ${questions} questions to answer!`}</MyP>
-      <MyP> Do you wish to continue?</MyP>
+      <MyP>{`This is question 1 of ${nquest}`}</MyP>
+      <Line />
+
+      <QuestionContainer>
+        <MyP>{questions.result[1]}</MyP>
+      </QuestionContainer>
       <MyDiv>
-        <ButtonGroup disableElevation variant="contained">
-          <Button endIcon={<PlayArrow />} color="info">
-            {' '}
-            Start{' '}
-          </Button>
-          <Button endIcon={<Cancel />} color="error" href="/">
-            {' '}
-            Cancel{' '}
-          </Button>
-        </ButtonGroup>
+        <Button variant="outlined" color="info">
+          {' '}
+          Send{' '}
+        </Button>
       </MyDiv>
     </Container>
   );
