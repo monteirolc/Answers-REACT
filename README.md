@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# 1°
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Criar API de perguntas [ X ]
 
-## Available Scripts
+# 2°
 
-In the project directory, you can run:
+# Paginas
 
-### `yarn start`
+-- 1° => Página de Escolha de Perguntas [ X ]
+-- 2° => Página de confirmação [ X ]
+-- 3° => Página de perguntas [ X ]
+-- 4° => Página de resultados [ X ]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 3°
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Obrigações por páginas
 
-### `yarn test`
+-- 1° Página
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Texto de seleção de perguntas [ X ]
+- Caixa de seleção da quantidade de perguntas [ X ]
+- Botão de aceitar [ X ]
 
-### `yarn build`
+-- 2° Página
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Texto de "Aceite das perguntas" [ X ]
+- Botão de "Start" [ X ]
+- Botão de "Cancel" [ X ]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-- 3° Página
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Texto de impressão das questões [ ]
+- "Checkbox" com as alternativas [ ]
+- Texto com a alternativa correta [ ]
+- Botão de avançar para próxima pergunta [ ]
 
-### `yarn eject`
+-- 4° Página
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Texto com pontuação
+- Texto com relatório das questões
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 4°
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Detalhes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-- 1° Página
 
-## Learn More
+- Possibilidade de rever o relatório na localStorage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-- 2° Página
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- O botão concel volta para a página de seleção de perguntas[ ]
+- O botão start seleciona as quatidades de questões em um banco de dados [ ]
 
-### Code Splitting
+-- 3° Página
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Deve ser contabilizado em cada pergunta a quantidade de acerto e erros [ ]
 
-### Analyzing the Bundle Size
+-- 4° Página
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Relátorio da quantidade de erros e acertos [ ]
+- Lista de questões marcando a certa e a errada [ ]
+- Aparecer resposta certa e resposta escolhida [ ]
+- Pontuação deve ser guardada no localStorage
 
-### Making a Progressive Web App
+# 5°
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# URL
 
-### Advanced Configuration
+-- https://opentdb.com/api.php?amount=QUANTIDADE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# 6°
 
-### Deployment
+# Requisitos da API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-- React
+-- Material UI
+-- Armazenar na localStorage
+-- git
 
-### `yarn build` fails to minify
+# 7°
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Pode ser usado
+
+-- Context API
+-- Axio
+-- Hooks
+-- Formik
+-- TDD
+-- DDD

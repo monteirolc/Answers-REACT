@@ -11,8 +11,8 @@ export default createGlobalStyle`
 
 body{
   font-family: sans-serif;
-  background: ${colors.primaryDarkColor};
-  color:${colors.primaryColor};
+  background: ${colors.midnightGreen};
+  color:${colors.ligthGreen};
 }
 html{
   font-size: 62.5%;
@@ -23,9 +23,9 @@ html, body, #root{
 
 button{
   cursor: pointer;
-  background: ${colors.primaryColor};
+  background: ${colors.midnightGreen};
   border:none;
-  color:${colors.ligthTextColor};
+  color:${colors.lightGrey};
   padding: 1.0rem 1.7rem;
   border-radius: 0.5rem;
   font-weight: 70rem;
@@ -35,7 +35,7 @@ button{
 a{
   cursor: pointer;
   text-decoration: none;
-  color: ${colors.primaryColor};
+  color: ${colors.midnightGreen};
 }
 
 ul{
@@ -49,10 +49,10 @@ nav{
 `;
 
 export const Container = styled.section`
-  max-width: 50rem;
+  max-width: 70%;
   background: white;
   margin: 3rem auto;
   padding: 3rem;
-  border-radius: 0.4rem;
-  box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
 `;
