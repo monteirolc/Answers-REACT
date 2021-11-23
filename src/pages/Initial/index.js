@@ -9,7 +9,7 @@ import Select from '@mui/material/Select';
 import Done from '@mui/icons-material/Done';
 
 import { Container } from '../../styles/GlobalStyles';
-import { Title, MyP } from './styled';
+import { MyP, Title } from './styled';
 
 export default function Home() {
   const [questions, setQuestions] = React.useState('');

@@ -29,8 +29,8 @@ Criar API de perguntas [ X ]
 
 -- 3° Página
 
-- Texto de impressão das questões [ ]
-- "Checkbox" com as alternativas [ ]
+- Texto de impressão das questões [ X ]
+- "RadioGroup" com as alternativas [ X ]
 - Texto com a alternativa correta [ ]
 - Botão de avançar para próxima pergunta [ ]
 

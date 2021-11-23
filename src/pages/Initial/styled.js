@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import * as colors from '../../config/colors';
 
+export const MyP = styled.p`
+  color: ${colors.ceruleanCrayola};
+  margin: 15px 0;
+  font-size: 15px;
+  font-weight: 700;
+`;
+
 export const Title = styled.h1`
   color: ${colors.ceruleanCrayola};
   font-size: 40px;
@@ -9,11 +16,4 @@ export const Title = styled.h1`
     margin-left: 10px;
     color: ${colors.ligthGreen};
   }
-`;
-
-export const MyP = styled.p`
-  color: ${colors.ceruleanCrayola};
-  margin: 15px 0;
-  font-size: 15px;
-  font-weight: 700;
 `;

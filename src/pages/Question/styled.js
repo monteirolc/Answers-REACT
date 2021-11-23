@@ -33,14 +33,31 @@ export const MyDiv = styled.div`
 
 export const QuestionContainer = styled.div`
   margin-top: 20px;
+  color: ${colors.persianGreen};
+  h3 {
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  p {
+    font-size: 12px;
+  }
   div {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0.5rem 0;
   }
 
   div + div {
-    border-top: 1px solid #000;
+    border-top: 1px solid ${colors.aquamarine};
   }
+`;
+
+export const InvLabel = styled.div`
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
 `;

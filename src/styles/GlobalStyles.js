@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css';
 import * as colors from '../config/colors';
 
 export default createGlobalStyle`
@@ -44,6 +45,12 @@ ul{
 
 nav{
   color: white;
+}
+
+body .Toastify .Toastify__toast-container .Toastify__toast--error{
+  background-color:  #232326;
+  font-size:1.35rem;
+  color:red;
 }
 
 `;

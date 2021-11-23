@@ -1,0 +1,26 @@
+ <FormControl component="fieldset" className="fmctrl1">
+        <FormLabel component="legend">Alternatives</FormLabel>
+        <RadioGroup
+          aria-label="Alternatives"
+          defaultValue=""
+          name="radio-buttons-group"
+        >
+          {newArray.map((item, j) => (
+            <FormControlLabel
+              key={j.toString() + n.toString()}
+              value={item}
+              control={<Radio />}
+              label={item}
+            />
+          ))}
+        </RadioGroup>
+        <Button
+          variant="outlined"
+          color="info"
+          onClick={() => console.log('')}
+          className="btn1"
+        >
+          {' '}
+          Confirm{' '}
+        </Button>
+      </FormControl>

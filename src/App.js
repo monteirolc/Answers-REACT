@@ -16,7 +16,16 @@ const App = function () {
         <Router history={history}>
           <Elements />
           <GlobalStyle />
-          <ToastContainer autoClose={3000} className="toast-container" />
+          <ToastContainer
+            autoClose={3000}
+            position="top-right"
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            pauseOnHover
+          />
         </Router>
       </PersistGate>
     </Provider>
