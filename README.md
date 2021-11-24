@@ -31,13 +31,12 @@ Criar API de perguntas [ X ]
 
 - Texto de impressão das questões [ X ]
 - "RadioGroup" com as alternativas [ X ]
-- Texto com a alternativa correta [ ]
-- Botão de avançar para próxima pergunta [ ]
+- Texto com a alternativa correta [ X ]
 
 -- 4° Página
 
-- Texto com pontuação
-- Texto com relatório das questões
+- Texto com pontuação []
+- Texto com relatório das questões []
 
 # 4°
 
@@ -45,12 +44,12 @@ Criar API de perguntas [ X ]
 
 -- 1° Página
 
-- Possibilidade de rever o relatório na localStorage
+- Possibilidade de rever o relatório na localStorage [ ]
 
 -- 2° Página
 
-- O botão concel volta para a página de seleção de perguntas[ ]
-- O botão start seleciona as quatidades de questões em um banco de dados [ ]
+- O botão concel volta para a página de seleção de perguntas[ X ]
+- O botão start seleciona as quatidades de questões em um banco de dados [ X ]
 
 -- 3° Página
 

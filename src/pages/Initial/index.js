@@ -45,9 +45,9 @@ export default function Home() {
           <MenuItem value={8}>8</MenuItem>
           <MenuItem value={9}>9</MenuItem>
           <MenuItem value={10}>10</MenuItem>
-          <MenuItem value={11}>15</MenuItem>
-          <MenuItem value={12}>20</MenuItem>
-          <MenuItem value={13}>25</MenuItem>
+          <MenuItem value={15}>15</MenuItem>
+          <MenuItem value={20}>20</MenuItem>
+          <MenuItem value={25}>25</MenuItem>
         </Select>
       </FormControl>
       <div />

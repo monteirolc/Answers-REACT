@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 import { Radio, RadioGroup } from '@mui/material';
-import MyFormControlLabel from '../../config/MyFormRadioLabel';
 
+import MyFormControlLabel from '../../config/MyFormRadioLabel';
+import replaces from '../../config/replaces';
 import axios from '../../services/axios';
 import Loading from '../../components/Loading';
 import { Container } from '../../styles/GlobalStyles';
-import { Title, MyP, Line, QuestionContainer } from './styled';
+import { Title, MyP, Line, QuestionContainer, InvLabel } from './styled';
 
 export default function Question() {
   const urlLocal = window.location.href;
   const [, , , , nquest] = urlLocal.split('/');
   const [questions, setQuestions] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [disable, setDisable] = useState(false);
+  const [correct, setCorrect] = useState(0);
+  const answerF = [];
+  const questionF = [];
+  const correctF = [];
+
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(false);
@@ -24,18 +29,57 @@ export default function Question() {
     fetchData();
   }, []);
 
-  function replaces(newString) {
-    return newString
-      .replaceAll(`&quot;`, `"`)
-      .replaceAll(`&#034;`, `"`)
-      .replaceAll(`&#039;`, `'`)
-      .replaceAll(`&lsquo;`, `'`)
-      .replaceAll(`&rsquo;`, `'`)
-      .replaceAll(`&Uuml;`, `Ü`)
-      .replaceAll(`&uuml;`, `ü`);
+  function handleclick(question, correctQ, yours, classN, divL) {
+    questionF.push(question);
+    correctF.push(correctQ);
+    const element = document.getElementById(classN);
+    const elementT = document.getElementById(divL);
+    if (correctQ === yours) {
+      setCorrect(correct + 1);
+    }
+    elementT.style.visibility = 'visible';
+    elementT.style.display = 'show';
+    element.setAttribute('disabled', 'true');
   }
 
-  function inputResp(question, n) {
+  function inputResp(question, n, type) {
+    if (type === 'boolean') {
+      const qtsn = [question.correct_answer, question.incorrect_answers[0]];
+      return (
+        <div>
+          <RadioGroup onChange={(e) => answerF.push(e.target.value)}>
+            <MyFormControlLabel
+              value={qtsn[0]}
+              label={qtsn[0]}
+              control={<Radio />}
+            />
+            <MyFormControlLabel
+              value={qtsn[1]}
+              label={qtsn[1]}
+              control={<Radio />}
+            />
+          </RadioGroup>
+          <Button
+            variant="contained"
+            id={`radio${n}`}
+            onClick={() =>
+              handleclick(
+                question.question,
+                question.correct_answer,
+                answerF[n],
+                `radio${n}`,
+                `show${n}`
+              )
+            }
+          >
+            Confirm
+          </Button>
+          <InvLabel id={`show${n}`}>
+            Correct answer: {question.correct_answer}{' '}
+          </InvLabel>
+        </div>
+      );
+    }
     const qtsn = [
       question.correct_answer,
       question.incorrect_answers[0],
@@ -45,33 +89,51 @@ export default function Question() {
 
     return (
       <div>
-        <RadioGroup>
+        <RadioGroup
+          onChange={(e) => {
+            answerF.push(e.target.value);
+          }}
+        >
           <MyFormControlLabel
-            disabled={disable}
             value={qtsn[0]}
             label={qtsn[0]}
             control={<Radio />}
           />
           <MyFormControlLabel
-            disabled={disable}
             value={qtsn[1]}
             label={qtsn[1]}
             control={<Radio />}
           />
           <MyFormControlLabel
-            disabled={disable}
             value={qtsn[2]}
             label={qtsn[2]}
             control={<Radio />}
           />
           <MyFormControlLabel
-            disabled={disable}
             value={qtsn[3]}
             label={qtsn[3]}
             control={<Radio />}
           />
         </RadioGroup>
-        <Button variant="contained">Confirm</Button>
+        <Button
+          variant="contained"
+          id={`radio${n}`}
+          onClick={() =>
+            handleclick(
+              question.question,
+              question.correct_answer,
+              answerF[n],
+              `radio${n}`,
+              `show${n}`
+            )
+          }
+        >
+          Confirm
+        </Button>
+        <InvLabel id={`show${n}`}>
+          {' '}
+          Correct answer: {question.correct_answer}{' '}
+        </InvLabel>
       </div>
     );
   }
@@ -92,11 +154,20 @@ export default function Question() {
               <div>
                 <span>{question.category}</span>
                 <h3>{replaces(question.question)}</h3>
-                <p>{inputResp(question, n)}</p>
+                <p>{inputResp(question, n, question.type)}</p>
               </div>
             ))
           : null}
       </QuestionContainer>
+      <Line />
+      <Button
+        variant="outlined"
+        color="secondary"
+        href={`/results/${nquest}/${correct}`}
+      >
+        Finish
+      </Button>
+      <MyP>{`Correct questions: ${correct} of ${nquest}`}</MyP>
     </Container>
   );
 }

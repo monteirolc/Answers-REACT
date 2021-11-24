@@ -57,7 +57,6 @@ export const QuestionContainer = styled.div`
 export const InvLabel = styled.div`
   visibility: hidden;
   display: none;
-  position: absolute;
-  margin-top: 0;
-  margin-left: 0;
+  color: ${colors.ceruleanCrayola};
+  font-weight: bolder;
 `;
