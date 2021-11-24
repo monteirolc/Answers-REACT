@@ -8,6 +8,13 @@ export const MyP = styled.p`
   font-weight: 700;
 `;
 
+export const MySpan = styled.span`
+  color: ${colors.ceruleanCrayola};
+  margin: 15px 0;
+  font-size: 15px;
+  font-weight: 700;
+`;
+
 export const Title = styled.h1`
   color: ${colors.ceruleanCrayola};
   font-size: 40px;
@@ -28,12 +35,12 @@ export const Center = styled.div`
 export const Line = styled.div`
   width: 90%;
   border: 1px solid ${colors.aquamarine};
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
 export const Bigger = styled.h1`
-  font-size: 15pt;
+  font-size: 12pt;
   font-weight: bold;
   font-style: italic;
   color: ${colors.midnightGreen};

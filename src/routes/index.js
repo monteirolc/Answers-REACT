@@ -13,7 +13,7 @@ export default function getElements() {
       <MyRoute exact path="/" component={Home} />
       <MyRoute exact path="/confirmation/:questions" component={Confirm} />
       <MyRoute exact path="/questions/:questions" component={Question} />
-      <MyRoute exact path="/results/:qts/:correct" component={Result} />
+      <MyRoute exact path="/results" component={Result} />
     </Switch>
   );
 }

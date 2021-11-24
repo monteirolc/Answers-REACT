@@ -15,9 +15,6 @@ module.exports = {
   plugins: ['react', 'prettier', 'react-hooks'],
 
   rules: {
-    'no-unused-vars': 'off',
-    'no-undef': 'off',
-    'no-console': 'off',
     'react/jsx-props-no-spreading': 'off',
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': 'off',
@@ -32,7 +29,7 @@ module.exports = {
       },
     ],
     'react-hooks/rules-of-hooks': 'error',
-    /// 'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'warn',
     'func-names': 'off',
     'no-tabs': ['error', { allowIndentationTabs: true }],
   },

@@ -60,3 +60,10 @@ export const InvLabel = styled.div`
   color: ${colors.ceruleanCrayola};
   font-weight: bolder;
 `;
+
+export const Center = styled.div`
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+`;

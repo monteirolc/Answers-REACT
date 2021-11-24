@@ -1,5 +1,4 @@
-import React from 'react';
-// import Button from '@mui/material/Button';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -9,17 +8,17 @@ import Select from '@mui/material/Select';
 import Done from '@mui/icons-material/Done';
 
 import { Container } from '../../styles/GlobalStyles';
-import { MyP, Title } from './styled';
+import { MyP, MyDiv, Title } from './styled';
 
 export default function Home() {
-  const [questions, setQuestions] = React.useState('');
+  const [questions, setQuestions] = useState('');
 
   const handleChange = (event) => {
     setQuestions(event.target.value);
   };
-
+  const dataInLocal = JSON.parse(localStorage.getItem('myQuestionsAndAnswers'));
   return (
-    <Container>
+    <Container isData={false}>
       <Title>
         <h1>
           Brain<small>test</small>
@@ -61,6 +60,18 @@ export default function Home() {
         {' '}
         Confirm{' '}
       </Button>
+      <MyDiv>
+        {dataInLocal ? (
+          <Button
+            variant="contained"
+            color="error"
+            size="large"
+            href="/results"
+          >
+            Old results
+          </Button>
+        ) : null}
+      </MyDiv>
     </Container>
   );
 }

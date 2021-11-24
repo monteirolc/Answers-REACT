@@ -35,8 +35,8 @@ Criar API de perguntas [ X ]
 
 -- 4° Página
 
-- Texto com pontuação []
-- Texto com relatório das questões []
+- Texto com pontuação [ X ]
+- Texto com relatório das questões [ X ]
 
 # 4°
 
@@ -44,7 +44,7 @@ Criar API de perguntas [ X ]
 
 -- 1° Página
 
-- Possibilidade de rever o relatório na localStorage [ ]
+- Possibilidade de rever o relatório na localStorage [ X ]
 
 -- 2° Página
 
@@ -53,14 +53,14 @@ Criar API de perguntas [ X ]
 
 -- 3° Página
 
-- Deve ser contabilizado em cada pergunta a quantidade de acerto e erros [ ]
+- Deve ser contabilizado em cada pergunta a quantidade de acerto e erros [ X ]
 
 -- 4° Página
 
-- Relátorio da quantidade de erros e acertos [ ]
-- Lista de questões marcando a certa e a errada [ ]
-- Aparecer resposta certa e resposta escolhida [ ]
-- Pontuação deve ser guardada no localStorage
+- Relátorio da quantidade de erros e acertos [ X ]
+- Lista de questões marcando a certa e a errada [ X ]
+- Aparecer resposta certa e resposta escolhida [ X ]
+- Pontuação deve ser guardada no localStorage [ X ]
 
 # 5°
 
